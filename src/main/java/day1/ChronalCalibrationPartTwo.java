@@ -1,4 +1,4 @@
-package day2;
+package day1;
 
 import java.net.URL;
 import java.nio.file.Files;
