@@ -15,7 +15,7 @@ public class IMSLabelFinder {
         }
         List<String> labels = Files.readAllLines(
                 Paths.get(inventory.toURI()));
-       for(String sourceLabel : labels){s
+       for(String sourceLabel : labels){
            for(String compareLabel : labels){
                List<Integer> errorIndex = new ArrayList<>();
                for(int i = 0 ; i< sourceLabel.length(); i++){
