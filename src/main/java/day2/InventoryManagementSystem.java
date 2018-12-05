@@ -1,8 +1,7 @@
 package day2;
 
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import aoc.AdventFileReader;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,13 +9,8 @@ import java.util.Map;
 public class InventoryManagementSystem {
 
     public static void main(String[] args) throws Exception {
-        URL inventory = InventoryManagementSystem.class.getClassLoader().getResource("day2.txt");
-        if (inventory == null) {
-            System.out.println("resource day2.txt not found, quitting");
-            return;
-        }
-        List<String> labels = Files.readAllLines(
-                Paths.get(inventory.toURI()));
+
+        List<String> labels = AdventFileReader.read("day2.txt");
         int twoCount = 0;
         int threeCount = 0;
         for (String label : labels) {

@@ -1,8 +1,7 @@
 package day1;
 
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import aoc.AdventFileReader;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,13 +10,7 @@ import java.util.stream.Collectors;
 public class ChronalCalibrationPartTwo {
 
     public static void main(String[] args) throws Exception {
-        URL calibrationLocation = ChronalCalibrationPartTwo.class.getClassLoader().getResource("day1.txt");
-        if (calibrationLocation == null) {
-            System.out.println("resource day1.txt not found, quitting");
-            return;
-        }
-        List<Integer> deltas = Files.readAllLines(
-                Paths.get(calibrationLocation.toURI()))
+        List<Integer> deltas = AdventFileReader.read("day1.txt")
                 .stream().map(Integer::parseInt).collect(Collectors.toList());
         Set<Integer> seenFrequencies = new HashSet<>();
         int currentFrequency = 0;
