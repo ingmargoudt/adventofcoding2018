@@ -1,3 +1,5 @@
+package day4;
+
 import aoc.AdventFileReader;
 
 import java.util.*;
