@@ -15,7 +15,7 @@ public class AdventFileReader {
     public static List<String> read(String filename) {
         URL calibrationLocation = ChronalCalibration.class.getClassLoader().getResource(filename);
         if (calibrationLocation == null) {
-            System.out.println("resource day1.txt not found, quitting");
+            System.out.println("resource "+filename+" not found, quitting");
             System.exit(0);
         }
         try {
